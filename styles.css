@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #181b28;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #353c5a;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #4caf50;
+}
+
+main {
+  margin-top: 80px;
+  background-color: #181b28;
+  padding: 20px;
+  background: rgba( 255, 255, 255, 0.25 );box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );backdrop-filter: blur( 4px );-webkit-backdrop-filter: blur( 4px );border-radius: 10px;border: 1px solid rgba( 255, 255, 255, 0.18 );
+  max-width: 60%;
+}
+
+.nombre-persona {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.descripcion-personal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 600px;
+  margin: 0 auto;
+  font-size: 18px;
+  margin-bottom: 100px;
+}
+
+.lenguajes {
+  display: grid;
+  justify-items: center;
+}
+
+.lenguajes h2 {
+  margin: 20px;
+}
+
+.lenguajes ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 60px;
+  justify-items: center;
+  width: 40%;
+}
+
+.lenguajes li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lenguajes img {
+  max-width: 100%;
+}
+
+footer {
+  background-color: #1f1f1f;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 40px;
+  min-width: 60%;
+}
+
+footer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+footer img {
+  border-radius: 50%;
+}
+
+footer a {
+  color: #4caf50;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #76ff03;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer p:last-child {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #bbb;
+}
