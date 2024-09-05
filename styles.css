@@ -142,3 +142,87 @@ footer p:last-child {
   font-size: 0.9em;
   color: #bbb;
 }
+
+
+@media (max-width: 800px) {
+  main {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .nombre-persona {
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #353c5a;
+    z-index: 1000;
+    padding: 10px 0;
+    font-size: 12px;
+  }
+
+  .descripcion-personal {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .lenguajes h2{
+    text-align: center;
+  }
+
+  .lenguajes ul {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+    gap: 20px;
+    width: 50%;
+  }
+
+  footer {
+    min-width: 100%;
+    padding: 10px;
+  }
+}
+
+/* Pantallas medianas */
+@media (min-width: 601px) and (max-width: 1024px) {
+  main {
+    max-width: 80%;
+  }
+
+  .lenguajes ul {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas medianas */
+    gap: 40px;
+    width: 70%;
+  }
+
+  .descripcion-personal {
+    font-size: 17px;
+  }
+
+  footer {
+    min-width: 80%;
+  }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1025px) {
+  main {
+    max-width: 60%;
+  }
+
+  .lenguajes ul {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas grandes */
+    gap: 60px;
+    width: 60%;
+  }
+
+  footer {
+    min-width: 60%;
+  }
+}
+
