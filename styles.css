@@ -48,7 +48,12 @@ main {
   margin-top: 80px;
   background-color: #181b28;
   padding: 20px;
-  background: rgba( 255, 255, 255, 0.25 );box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );backdrop-filter: blur( 4px );-webkit-backdrop-filter: blur( 4px );border-radius: 10px;border: 1px solid rgba( 255, 255, 255, 0.18 );
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   max-width: 60%;
 }
 
@@ -84,7 +89,7 @@ main {
 
 .lenguajes ul {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(3, 1fr);
   gap: 60px;
   justify-items: center;
   width: 40%;
@@ -99,6 +104,92 @@ main {
 
 .lenguajes img {
   max-width: 100%;
+}
+
+/* Ajustes generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #181b28;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+  width: 60%; /* Ajustamos el contenedor del slider */
+  background-color: #181b28;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  overflow: hidden; /* Para que solo se vea una tarjeta a la vez */
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.slider-item {
+  min-width: 100%; /* Mostrará solo una tarjeta a la vez */
+  display: flex;
+  justify-content: center; /* Centra las tarjetas */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  width: 80%; /* Ajusta el tamaño de la tarjeta */
+}
+
+.card-image {
+  width: 200px;
+  height: 100px;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#prev {
+  left: 10px;
+}
+
+#next {
+  right: 10px;
 }
 
 footer {
@@ -143,7 +234,6 @@ footer p:last-child {
   color: #bbb;
 }
 
-
 @media (max-width: 800px) {
   main {
     max-width: 100%;
@@ -172,12 +262,15 @@ footer p:last-child {
     font-size: 16px;
   }
 
-  .lenguajes h2{
+  .lenguajes h2 {
     text-align: center;
   }
 
   .lenguajes ul {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 columnas en pantallas pequeñas */
     gap: 20px;
     width: 50%;
   }
@@ -195,7 +288,10 @@ footer p:last-child {
   }
 
   .lenguajes ul {
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas medianas */
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* 3 columnas en pantallas medianas */
     gap: 40px;
     width: 70%;
   }
@@ -225,4 +321,3 @@ footer p:last-child {
     min-width: 60%;
   }
 }
-
